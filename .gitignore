@@ -3,3 +3,4 @@ dist
 .cache
 
 styles/*.css
+styles/*.css.*
