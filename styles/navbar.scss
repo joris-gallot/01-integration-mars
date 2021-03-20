@@ -1,0 +1,90 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+
+  .left-menu {
+    display: flex;
+    align-items: center;
+
+    .app-name {
+      font-size: 24px;
+      font-weight: bold;
+      position: relative;
+
+      .circle {
+        border-radius: 999px;
+        background-color: red;
+        position: absolute;
+        top: -3px;
+        right: -11px;
+        width: 11px;
+        height: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .inside {
+          border-radius: 999px;
+          background-color: white;
+          width: 5px;
+          height: 5px;
+        }
+      }
+    }
+
+    .phone {
+      color: $light-gray;
+      margin-left: 4rem;
+      font-size: 14px;
+    }
+  }
+
+  .right-menu {
+    display: flex;
+    align-items: center;
+
+    .buy {
+      font-weight: bold;
+      margin-right: 2rem;
+    }
+
+    .burger {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+
+      .line {
+        width: 20px;
+        height: 2px;
+        background-color: red;
+        margin-bottom: .3rem;
+
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .line:last-child {
+        margin: 0;
+      }
+
+      &:hover {
+        .line1 {
+          transform: translate(0, 1px) rotate(45deg);
+          margin: 0;
+        }
+
+        .line2 {
+          display: none;
+        }
+
+        .line3 {
+          transform: translate(0, -1px) rotate(-45deg);
+          margin: 0;
+        }
+      }
+    }
+  }
+}

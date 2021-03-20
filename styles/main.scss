@@ -1,0 +1,14 @@
+$light-gray: #92a1a5;
+
+@import 'reset';
+@import 'navbar';
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+}
