@@ -6,7 +6,7 @@ function toggleMenuBurger() {
 
   if (document.body.classList.contains('burger-active')) {
     navbar.classList.remove('nav-overlay')
-  } else {
+  } else if (window.scrollY > 80 && !document.body.classList.contains('burger-active'))  {
     navbar.classList.add('nav-overlay')
   }
 }
