@@ -1,0 +1,77 @@
+.overlay {
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  .menu-overlay {
+    display: none;
+  }
+}
+
+.burger-active {
+  overflow: hidden;
+
+  .navbar .nav-container .left-menu .app-name,
+  .navbar .nav-container .right-menu .buy,
+  .navbar .nav-container .left-menu .phone,
+  .navbar .nav-container .right-menu .burger .line2
+  {
+    display: none;
+  }
+
+  .navbar .nav-container .right-menu .burger .line1 {
+    transform: translate(0, 1px) rotate(45deg);
+    margin-bottom: 0;
+  }
+
+  .navbar .nav-container .right-menu .burger .line3 {
+    transform: translate(0, -1px) rotate(-45deg);
+    margin-bottom: 0;
+  }
+
+  .overlay {
+    z-index: 15;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: .95;
+
+    .menu-overlay {
+      z-index: 10;
+      color: white;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          margin-bottom: 1rem;
+          cursor: pointer;
+          text-underline-offset: 5px;
+          font-size: 24px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

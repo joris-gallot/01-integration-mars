@@ -1,11 +1,27 @@
+$primary: #ff343d;
 $light-gray: #92a1a5;
-
-@import 'reset';
-@import 'navbar';
+$very-light-gray: #eff1f6;
 
 * {
   font-family: "Montserrat", sans-serif;
 }
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%) rotate(-90deg);
+    animationTimingFunction: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0) rotate(-90deg);
+    animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@import 'reset';
+@import 'navbar';
+@import 'hero';
+@import 'menu-overlay';
 
 .container {
   max-width: 1300px;

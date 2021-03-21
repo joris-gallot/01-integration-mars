@@ -4,3 +4,5 @@ dist
 
 styles/*.css
 styles/*.css.*
+
+.DS_Store
