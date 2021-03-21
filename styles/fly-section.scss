@@ -1,0 +1,65 @@
+.fly-section {
+  height: 615px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+
+  .tap-to-fly {
+    padding: 0 5rem;
+    background-image: url('../images/tap-to-fly.png');
+    background-size: cover;
+    grid-column: 1 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 14px;
+        color: $light-gray;
+      }
+    }
+  }
+
+  .fly-higher {
+    background-image: url('../images/photo-fly-higher.png');
+    background-size: cover;
+    grid-column: 4 / 11;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .dark-container {
+      background-color: rgba(0, 0, 0, .6);
+      max-width: calc(45% - 10rem);
+      height: 100%;
+      color: white;
+      font-size: 60px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      padding: 0 5rem;
+    }
+
+    button {
+      padding: .9rem 1.5rem;
+      border-radius: 9999px;
+      margin-right: 9rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      text-transform: uppercase;
+      transform: rotate(-90deg);
+    }
+  }
+}
