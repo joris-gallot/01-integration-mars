@@ -1,4 +1,5 @@
 $primary: #ff343d;
+$dark-gray: #232323;
 $light-gray: #92a1a5;
 $very-light-gray: #eff1f6;
 
@@ -23,6 +24,8 @@ $very-light-gray: #eff1f6;
 @import 'hero';
 @import 'menu-overlay';
 @import 'fly-section';
+@import 'features-section';
+@import 'new-generation-section';
 
 .container {
   max-width: 1300px;

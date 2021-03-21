@@ -1,0 +1,46 @@
+.new-generation-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 656px;
+
+  .screen-image {
+    background-image: url('../images/photo-new-generation.png');
+    background-size: cover;
+  }
+
+  .new-generation {
+    font-size: 92px;
+    background-color: $dark-gray;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5rem;
+
+    .text-primary {
+      color: $primary;
+    }
+
+    button {
+      text-transform: uppercase;
+      border: 1px solid white;
+      outline: none;
+      border-radius: 999px;
+      padding: .9rem 1.7rem;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: transparent;
+      color: white;
+      transition-property: background-color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 200ms;
+
+      &:hover {
+        color: $dark-gray;
+        background-color: white;
+      }
+    }
+  }
+}
