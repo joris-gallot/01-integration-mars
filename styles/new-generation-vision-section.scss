@@ -1,4 +1,4 @@
-.new-generation-section {
+.new-generation-vision-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 656px;
@@ -8,7 +8,7 @@
     background-size: cover;
   }
 
-  .new-generation {
+  .new-generation-vision {
     font-size: 92px;
     background-color: $dark-gray;
     color: white;
@@ -17,10 +17,6 @@
     align-items: center;
     justify-content: center;
     padding: 0 5rem;
-
-    .text-primary {
-      color: $primary;
-    }
 
     button {
       text-transform: uppercase;

@@ -7,6 +7,9 @@ $very-light-gray: #eff1f6;
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
 
 @keyframes bounce {
   0%, 100% {
@@ -25,7 +28,12 @@ $very-light-gray: #eff1f6;
 @import 'menu-overlay';
 @import 'fly-section';
 @import 'features-section';
-@import 'new-generation-section';
+@import 'new-generation-vision-section';
+@import 'new-generation-flying-section';
+
+.text-primary {
+  color: $primary;
+}
 
 .container {
   max-width: 1300px;

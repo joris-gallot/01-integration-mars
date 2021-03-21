@@ -1,0 +1,26 @@
+.new-generation-flying-section {
+  display: flex;
+  align-items: center;
+  height: 870px;
+  justify-content: space-between;
+  padding-left: 11rem;
+
+  p {
+    font-size: 92px;
+    margin-bottom: 5rem;
+  }
+
+  .products {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 3rem;
+  }
+
+  img {
+    margin-right: -8rem;
+    display: block;
+    max-height: 590px;
+    width: auto;
+    height: auto;
+  }
+}
