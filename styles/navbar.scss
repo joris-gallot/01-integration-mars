@@ -36,22 +36,16 @@
 
         .circle {
           border-radius: 999px;
-          background-color: $primary;
+          border: 3px solid $primary;
+          background-color: transparent;
           position: absolute;
-          top: -3px;
-          right: -11px;
-          width: 11px;
-          height: 11px;
+          top: -4px;
+          right: -12px;
+          width: 6px;
+          height: 6px;
           display: flex;
           align-items: center;
           justify-content: center;
-
-          .inside {
-            border-radius: 999px;
-            background-color: $very-light-gray;
-            width: 5px;
-            height: 5px;
-          }
         }
       }
 
