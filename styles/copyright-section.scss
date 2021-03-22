@@ -1,0 +1,17 @@
+.copyright-section {
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  .app-name-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: $light-gray;
+  }
+}

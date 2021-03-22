@@ -98,24 +98,6 @@ table {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
-.navbar .nav-container .left-menu .app-name {
-  font-size: 24px;
-  font-weight: bold;
-  position: relative;
-}
-.navbar .nav-container .left-menu .app-name .circle {
-  border-radius: 999px;
-  border: 3px solid #ff343d;
-  background-color: transparent;
-  position: absolute;
-  top: -4px;
-  right: -12px;
-  width: 6px;
-  height: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .navbar .nav-container .left-menu .phone {
   color: #92a1a5;
   margin-left: 4rem;
@@ -518,8 +500,42 @@ table {
   mix-blend-mode: screen;
 }
 
+.copyright-section {
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright-section .app-name-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.copyright-section p {
+  color: #92a1a5;
+}
+
 .text-primary {
   color: #ff343d;
+}
+
+.app-name {
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+}
+.app-name .mars-circle {
+  border-radius: 999px;
+  border: 3px solid #ff343d;
+  background-color: transparent;
+  position: absolute;
+  top: -4px;
+  right: -12px;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
