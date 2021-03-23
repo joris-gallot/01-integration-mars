@@ -5,9 +5,17 @@
   justify-content: space-between;
   padding-left: 11rem;
 
+  @media (max-width: $sm) {
+    padding-left: 0;
+  }
+
   p {
     font-size: 92px;
     margin-bottom: 5rem;
+
+    @media (max-width: $sm) {
+      font-size: 57px;
+    }
   }
 
   .products {
@@ -17,6 +25,10 @@
   }
 
   img {
+    @media (max-width: $sm) {
+      display: none;
+    }
+
     margin-right: -8rem;
     display: block;
     max-height: 590px;

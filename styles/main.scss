@@ -2,6 +2,7 @@ $primary: #ff343d;
 $dark-gray: #232323;
 $light-gray: #92a1a5;
 $very-light-gray: #eff1f6;
+$sm: 425px;
 
 * {
   font-family: "Montserrat", sans-serif;
@@ -54,6 +55,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.phone {
+  color: $light-gray;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+  .phone-svg {
+    display: block;
+    max-width: 15px;
+    max-height: 15px;
+    width: auto;
+    height: auto;
+    margin-right: .3rem;
   }
 }
 

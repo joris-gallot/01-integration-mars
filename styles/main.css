@@ -68,11 +68,21 @@ table {
   border-spacing: 0;
 }
 
-.nav-overlay {
+body .nav-overlay {
   background-color: rgba(0, 0, 0, 0.6);
 }
-.nav-overlay .left-menu {
+body .nav-overlay .left-menu {
   color: white;
+}
+@media (max-width: 425px) {
+  body .nav-overlay .nav-container .right-menu .buy {
+    color: white;
+  }
+}
+@media (max-width: 425px) {
+  body .nav-overlay .nav-container .right-menu .burger .line {
+    background-color: white;
+  }
 }
 
 .navbar {
@@ -91,6 +101,11 @@ table {
   align-items: center;
   height: 100%;
 }
+@media (max-width: 425px) {
+  .navbar .nav-container {
+    padding: 0 1rem;
+  }
+}
 .navbar .nav-container .left-menu {
   display: flex;
   align-items: center;
@@ -99,19 +114,12 @@ table {
   transition-duration: 500ms;
 }
 .navbar .nav-container .left-menu .phone {
-  color: #92a1a5;
   margin-left: 4rem;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
 }
-.navbar .nav-container .left-menu .phone .phone-svg {
-  display: block;
-  max-width: 15px;
-  max-height: 15px;
-  width: auto;
-  height: auto;
-  margin-right: 0.3rem;
+@media (max-width: 425px) {
+  .navbar .nav-container .left-menu .phone {
+    display: none;
+  }
 }
 .navbar .nav-container .right-menu {
   display: flex;
@@ -123,6 +131,14 @@ table {
   color: white;
   cursor: pointer;
   text-underline-offset: 3px;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+@media (max-width: 425px) {
+  .navbar .nav-container .right-menu .buy {
+    color: black;
+  }
 }
 .navbar .nav-container .right-menu .buy:hover {
   text-decoration: underline;
@@ -141,7 +157,12 @@ table {
   height: 2px;
   background-color: white;
   margin-bottom: 0.3rem;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.3s, background-color 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@media (max-width: 425px) {
+  .navbar .nav-container .right-menu .burger .line {
+    background-color: black;
+  }
 }
 .navbar .nav-container .right-menu .burger .line:last-child {
   margin: 0;
@@ -156,6 +177,11 @@ table {
   position: relative;
   padding-left: 18rem;
 }
+@media (max-width: 425px) {
+  .hero {
+    padding-left: 0;
+  }
+}
 .hero .scroll {
   position: absolute;
   left: 9.5rem;
@@ -164,6 +190,11 @@ table {
   font-size: 18px;
   font-weight: bold;
   animation: bounce 1s infinite;
+}
+@media (max-width: 425px) {
+  .hero .scroll {
+    left: 0;
+  }
 }
 .hero .product-description {
   display: flex;
@@ -180,10 +211,21 @@ table {
   background-color: #ff343d;
   border-radius: 99px;
 }
+@media (max-width: 425px) {
+  .hero .product-description .red-circle {
+    left: 1rem;
+    top: -3rem;
+  }
+}
 .hero .product-description span {
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 2rem;
+}
+@media (max-width: 425px) {
+  .hero .product-description span {
+    font-size: 58px;
+  }
 }
 .hero .product-description p {
   font-size: 14px;
@@ -203,6 +245,11 @@ table {
   width: 580px;
   height: 580px;
 }
+@media (max-width: 425px) {
+  .hero .white-circle {
+    display: none;
+  }
+}
 .hero .white-circle .drone-img {
   display: block;
   max-width: 1231px;
@@ -217,6 +264,11 @@ table {
   background-color: #ff343d;
   width: 38%;
   height: 100%;
+}
+@media (max-width: 425px) {
+  .hero .red-part {
+    display: none;
+  }
 }
 .hero .red-part .mars {
   user-select: none;
@@ -249,6 +301,9 @@ table {
 .burger-active .navbar .nav-container .right-menu .burger .line2 {
   display: none;
 }
+.burger-active .nav-container .right-menu .burger .line {
+  background-color: white;
+}
 .burger-active .navbar .nav-container .right-menu .burger .line1 {
   transform: translate(0, 1px) rotate(45deg);
   margin-bottom: 0;
@@ -280,6 +335,15 @@ table {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 2rem;
+  text-align: center;
+}
+.burger-active .overlay .menu-overlay .phone {
+  margin-top: 4rem;
+}
+@media (min-width: 425px) {
+  .burger-active .overlay .menu-overlay .phone {
+    display: none;
+  }
 }
 .burger-active .overlay .menu-overlay ul {
   display: flex;
@@ -302,14 +366,26 @@ table {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
 }
+@media (max-width: 640px) {
+  .fly-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .fly-section .tap-to-fly {
   padding: 0 5rem;
   background-image: url("../images/tap-to-fly.png");
   background-size: cover;
-  grid-column: 1/4;
+  grid-column: span 3/span 3;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+@media (max-width: 640px) {
+  .fly-section .tap-to-fly {
+    justify-content: flex-start;
+    padding: 0;
+    grid-column: span 1/span 1;
+  }
 }
 .fly-section .tap-to-fly .description {
   display: flex;
@@ -327,10 +403,15 @@ table {
 .fly-section .fly-higher {
   background-image: url("../images/photo-fly-higher.png");
   background-size: cover;
-  grid-column: 4/11;
+  grid-column: span 7/span 7;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 640px) {
+  .fly-section .fly-higher {
+    grid-column: span 1/span 1;
+  }
 }
 .fly-section .fly-higher .dark-container {
   background-color: rgba(0, 0, 0, 0.6);
@@ -342,6 +423,14 @@ table {
   display: flex;
   align-items: center;
   padding: 0 5rem;
+}
+@media (max-width: 640px) {
+  .fly-section .fly-higher .dark-container {
+    max-width: none;
+    font-size: 50px;
+    padding: 0 1rem;
+    grid-column: span 1/span 1;
+  }
 }
 .fly-section .fly-higher button {
   padding: 0.9rem 1.7rem;
@@ -355,6 +444,11 @@ table {
   text-transform: uppercase;
   transform: rotate(-90deg);
 }
+@media (max-width: 425px) {
+  .fly-section .fly-higher button {
+    margin-right: 0;
+  }
+}
 
 .features-section {
   padding: 6rem 0;
@@ -363,6 +457,11 @@ table {
   align-items: center;
   height: calc(600px - calc(6rem * 2));
 }
+@media (max-width: 425px) {
+  .features-section {
+    height: auto;
+  }
+}
 .features-section .title {
   font-size: 48px;
   font-weight: bold;
@@ -370,8 +469,13 @@ table {
 .features-section .features-grid {
   margin-top: 8rem;
   display: grid;
-  column-gap: 5rem;
+  gap: 5rem;
   grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 425px) {
+  .features-section .features-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .features-section .features-grid .feature {
   display: flex;
@@ -387,8 +491,13 @@ table {
 
 .new-generation-vision-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   height: 656px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 425px) {
+  .new-generation-vision-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .new-generation-vision-section .screen-image {
   background-image: url("../images/photo-new-generation.png");
@@ -403,6 +512,12 @@ table {
   align-items: center;
   justify-content: center;
   padding: 0 5rem;
+}
+@media (max-width: 425px) {
+  .new-generation-vision-section .new-generation-vision {
+    padding: 0;
+    font-size: 57px;
+  }
 }
 .new-generation-vision-section .new-generation-vision button {
   text-transform: uppercase;
@@ -431,9 +546,19 @@ table {
   justify-content: space-between;
   padding-left: 11rem;
 }
+@media (max-width: 425px) {
+  .new-generation-flying-section {
+    padding-left: 0;
+  }
+}
 .new-generation-flying-section p {
   font-size: 92px;
   margin-bottom: 5rem;
+}
+@media (max-width: 425px) {
+  .new-generation-flying-section p {
+    font-size: 57px;
+  }
 }
 .new-generation-flying-section .products {
   font-size: 18px;
@@ -446,6 +571,11 @@ table {
   max-height: 590px;
   width: auto;
   height: auto;
+}
+@media (max-width: 425px) {
+  .new-generation-flying-section img {
+    display: none;
+  }
 }
 
 .journey-section {
@@ -460,6 +590,12 @@ table {
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 15rem;
+}
+@media (max-width: 425px) {
+  .journey-section {
+    font-size: 72px;
+    text-align: center;
+  }
 }
 .journey-section p {
   margin-bottom: 4rem;
@@ -536,6 +672,21 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.phone {
+  color: #92a1a5;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.phone .phone-svg {
+  display: block;
+  max-width: 15px;
+  max-height: 15px;
+  width: auto;
+  height: auto;
+  margin-right: 0.3rem;
 }
 
 .container {

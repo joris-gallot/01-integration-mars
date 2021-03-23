@@ -7,6 +7,10 @@
   position: relative;
   padding-left: 18rem;
 
+  @media (max-width: $sm) {
+    padding-left: 0;
+  }
+
   .scroll {
     position: absolute;
     left: 9.5rem;
@@ -15,6 +19,10 @@
     font-size: 18px;
     font-weight: bold;
     animation: bounce 1s infinite;
+
+    @media (max-width: $sm) {
+      left: 0;
+    }
   }
 
   .product-description {
@@ -31,12 +39,21 @@
       height: 7px;
       background-color: $primary;
       border-radius: 99px;
+
+      @media (max-width: $sm) {
+        left: 1rem;
+        top: -3rem;
+      }
     }
 
     span {
       font-size: 60px;
       font-weight: bold;
       margin-bottom: 2rem;
+
+      @media (max-width: $sm) {
+        font-size: 58px;
+      }
     }
 
     p {
@@ -47,6 +64,10 @@
   }
 
   .white-circle {
+    @media (max-width: $sm) {
+      display: none;
+    }
+
     position: absolute;
     right: calc(38% - calc(580px / 2));
     top: calc(50% - calc(580px / 2));
@@ -75,6 +96,11 @@
     background-color: $primary;
     width: 38%;
     height: 100%;
+
+
+    @media (max-width: $sm) {
+      display: none;
+    }
 
     .mars {
       user-select: none;

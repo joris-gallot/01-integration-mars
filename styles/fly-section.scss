@@ -3,14 +3,24 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
 
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .tap-to-fly {
     padding: 0 5rem;
     background-image: url('../images/tap-to-fly.png');
     background-size: cover;
-    grid-column: 1 / 4;
+    grid-column: span 3 / span 3;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @media (max-width: 640px) {
+      justify-content: flex-start;
+      padding: 0;
+      grid-column: span 1 / span 1;
+    }
 
     .description {
       display: flex;
@@ -32,10 +42,14 @@
   .fly-higher {
     background-image: url('../images/photo-fly-higher.png');
     background-size: cover;
-    grid-column: 4 / 11;
+    grid-column: span 7 / span 7;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 640px) {
+      grid-column: span 1 / span 1;
+    }
 
     .dark-container {
       background-color: rgba(0, 0, 0, .6);
@@ -47,6 +61,13 @@
       display: flex;
       align-items: center;
       padding: 0 5rem;
+
+      @media (max-width: 640px) {
+        max-width: none;
+        font-size: 50px;
+        padding: 0 1rem;
+        grid-column: span 1 / span 1;
+      }
     }
 
     button {
@@ -60,6 +81,10 @@
       font-size: 18px;
       text-transform: uppercase;
       transform: rotate(-90deg);
+
+      @media (max-width: $sm) {
+        margin-right: 0;
+      }
     }
   }
 }
