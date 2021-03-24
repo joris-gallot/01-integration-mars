@@ -1,11 +1,3 @@
-* {
-  font-family: "Montserrat", sans-serif;
-}
-
-body {
-  overflow-x: hidden;
-}
-
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%) rotate(-90deg);
@@ -16,6 +8,44 @@ body {
     animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+.text-primary {
+  color: #ff343d;
+}
+
+.app-name {
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+}
+.app-name .mars-circle {
+  border-radius: 999px;
+  border: 3px solid #ff343d;
+  background-color: transparent;
+  position: absolute;
+  top: -4px;
+  right: -12px;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone {
+  color: #92a1a5;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.phone .phone-svg {
+  display: block;
+  max-width: 15px;
+  max-height: 15px;
+  width: auto;
+  height: auto;
+  margin-right: 0.3rem;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -101,6 +131,11 @@ body .nav-overlay .left-menu {
   align-items: center;
   height: 100%;
 }
+@media (max-width: 768px) {
+  .navbar .nav-container {
+    padding: 0 3rem;
+  }
+}
 @media (max-width: 425px) {
   .navbar .nav-container {
     padding: 0 1rem;
@@ -177,6 +212,11 @@ body .nav-overlay .left-menu {
   position: relative;
   padding-left: 18rem;
 }
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 2rem;
+  }
+}
 @media (max-width: 425px) {
   .hero {
     padding-left: 0;
@@ -191,7 +231,7 @@ body .nav-overlay .left-menu {
   font-weight: bold;
   animation: bounce 1s infinite;
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .hero .scroll {
     left: 0;
   }
@@ -211,19 +251,19 @@ body .nav-overlay .left-menu {
   background-color: #ff343d;
   border-radius: 99px;
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .hero .product-description .red-circle {
     left: 1rem;
     top: -3rem;
   }
 }
-.hero .product-description span {
+.hero .product-description .title {
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 2rem;
 }
-@media (max-width: 425px) {
-  .hero .product-description span {
+@media (max-width: 768px) {
+  .hero .product-description .title {
     font-size: 58px;
   }
 }
@@ -232,10 +272,13 @@ body .nav-overlay .left-menu {
   color: #92a1a5;
   line-height: 30px;
 }
+@media (min-width: 425px) and (max-width: 768px) {
+  .hero .product-description p {
+    margin-bottom: 15rem;
+  }
+}
 .hero .white-circle {
   position: absolute;
-  right: calc(38% - calc(580px / 2));
-  top: calc(50% - calc(580px / 2));
   z-index: 5;
   display: flex;
   align-items: center;
@@ -244,10 +287,20 @@ body .nav-overlay .left-menu {
   background-color: white;
   width: 580px;
   height: 580px;
+  right: calc(38% - calc(580px / 2));
+  top: calc(50% - calc(580px / 2));
 }
 @media (max-width: 425px) {
   .hero .white-circle {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .hero .white-circle {
+    width: 348px;
+    height: 348px;
+    right: calc(38% - calc(348px / 2));
+    top: calc(70% - calc(348px / 2));
   }
 }
 .hero .white-circle .drone-img {
@@ -256,6 +309,11 @@ body .nav-overlay .left-menu {
   max-height: 527px;
   width: auto;
   height: auto;
+}
+@media (max-width: 768px) {
+  .hero .white-circle .drone-img {
+    width: 162%;
+  }
 }
 .hero .red-part {
   overflow: hidden;
@@ -366,7 +424,7 @@ body .nav-overlay .left-menu {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .fly-section {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -380,7 +438,14 @@ body .nav-overlay .left-menu {
   align-items: center;
   justify-content: flex-end;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .fly-section .tap-to-fly {
+    padding: 0 2rem;
+    justify-content: flex-start;
+    grid-column: span 1/span 1;
+  }
+}
+@media (max-width: 425px) {
   .fly-section .tap-to-fly {
     justify-content: flex-start;
     padding: 0;
@@ -400,6 +465,11 @@ body .nav-overlay .left-menu {
   font-size: 14px;
   color: #92a1a5;
 }
+@media (max-width: 425px) {
+  .fly-section .tap-to-fly .description p {
+    text-align: end;
+  }
+}
 .fly-section .fly-higher {
   background-image: url("../images/photo-fly-higher.png");
   background-size: cover;
@@ -408,7 +478,7 @@ body .nav-overlay .left-menu {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .fly-section .fly-higher {
     grid-column: span 1/span 1;
   }
@@ -424,7 +494,14 @@ body .nav-overlay .left-menu {
   align-items: center;
   padding: 0 5rem;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .fly-section .fly-higher .dark-container {
+    font-size: 50px;
+    padding: 0 3rem;
+    grid-column: span 1/span 1;
+  }
+}
+@media (max-width: 425px) {
   .fly-section .fly-higher .dark-container {
     max-width: none;
     font-size: 50px;
@@ -444,6 +521,11 @@ body .nav-overlay .left-menu {
   text-transform: uppercase;
   transform: rotate(-90deg);
 }
+@media (max-width: 768px) {
+  .fly-section .fly-higher button {
+    margin-right: 5rem;
+  }
+}
 @media (max-width: 425px) {
   .fly-section .fly-higher button {
     margin-right: 0;
@@ -457,7 +539,7 @@ body .nav-overlay .left-menu {
   align-items: center;
   height: calc(600px - calc(6rem * 2));
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .features-section {
     height: auto;
   }
@@ -471,6 +553,11 @@ body .nav-overlay .left-menu {
   display: grid;
   gap: 5rem;
   grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 768px) {
+  .features-section .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 425px) {
   .features-section .features-grid {
@@ -494,9 +581,10 @@ body .nav-overlay .left-menu {
   height: 656px;
   grid-template-columns: repeat(2, 1fr);
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .new-generation-vision-section {
     grid-template-columns: repeat(1, 1fr);
+    height: 800px;
   }
 }
 .new-generation-vision-section .screen-image {
@@ -512,6 +600,12 @@ body .nav-overlay .left-menu {
   align-items: center;
   justify-content: center;
   padding: 0 5rem;
+}
+@media (max-width: 768px) {
+  .new-generation-vision-section .new-generation-vision {
+    padding: 0 2rem;
+    font-size: 75px;
+  }
 }
 @media (max-width: 425px) {
   .new-generation-vision-section .new-generation-vision {
@@ -551,6 +645,12 @@ body .nav-overlay .left-menu {
     padding-left: 0;
   }
 }
+@media (max-width: 768px) {
+  .new-generation-flying-section {
+    padding-left: 2rem;
+    font-size: 75px;
+  }
+}
 .new-generation-flying-section p {
   font-size: 92px;
   margin-bottom: 5rem;
@@ -572,6 +672,11 @@ body .nav-overlay .left-menu {
   width: auto;
   height: auto;
 }
+@media (max-width: 768px) {
+  .new-generation-flying-section img {
+    display: none;
+  }
+}
 @media (max-width: 425px) {
   .new-generation-flying-section img {
     display: none;
@@ -590,11 +695,11 @@ body .nav-overlay .left-menu {
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 15rem;
+  text-align: center;
 }
 @media (max-width: 425px) {
   .journey-section {
     font-size: 72px;
-    text-align: center;
   }
 }
 .journey-section p {
@@ -651,48 +756,12 @@ body .nav-overlay .left-menu {
   color: #92a1a5;
 }
 
-.text-primary {
-  color: #ff343d;
+* {
+  font-family: "Montserrat", sans-serif;
 }
 
-.app-name {
-  font-size: 24px;
-  font-weight: bold;
-  position: relative;
-}
-.app-name .mars-circle {
-  border-radius: 999px;
-  border: 3px solid #ff343d;
-  background-color: transparent;
-  position: absolute;
-  top: -4px;
-  right: -12px;
-  width: 6px;
-  height: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.phone {
-  color: #92a1a5;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-.phone .phone-svg {
-  display: block;
-  max-width: 15px;
-  max-height: 15px;
-  width: auto;
-  height: auto;
-  margin-right: 0.3rem;
-}
-
-.container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 2.5rem 0;
+body {
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -30,15 +30,18 @@ body {
   transition-duration: 400ms;
 
   .nav-container {
-    @media (max-width: $sm) {
-      padding: 0 1rem;
-    }
-
     padding: 0 12rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    @media (max-width: $md) {
+      padding: 0 3rem;
+    }
+    @media (max-width: $sm) {
+      padding: 0 1rem;
+    }
 
     .left-menu {
       display: flex;

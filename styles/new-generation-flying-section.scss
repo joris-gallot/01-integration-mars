@@ -9,6 +9,11 @@
     padding-left: 0;
   }
 
+  @media (max-width: $md) {
+    padding-left: 2rem;
+    font-size: 75px;
+  }
+
   p {
     font-size: 92px;
     margin-bottom: 5rem;
@@ -25,6 +30,11 @@
   }
 
   img {
+
+    @media (max-width: $md) {
+      display: none;
+    }
+
     @media (max-width: $sm) {
       display: none;
     }

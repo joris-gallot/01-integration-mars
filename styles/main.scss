@@ -1,28 +1,5 @@
-$primary: #ff343d;
-$dark-gray: #232323;
-$light-gray: #92a1a5;
-$very-light-gray: #eff1f6;
-$sm: 425px;
-
-* {
-  font-family: "Montserrat", sans-serif;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%) rotate(-90deg);
-    animationTimingFunction: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(0) rotate(-90deg);
-    animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
-
+@import 'var';
+@import 'global';
 @import 'reset';
 @import 'navbar';
 @import 'hero';
@@ -34,48 +11,10 @@ body {
 @import 'journey-section';
 @import 'copyright-section';
 
-.text-primary {
-  color: $primary;
+* {
+  font-family: "Montserrat", sans-serif;
 }
 
-.app-name {
-  font-size: 24px;
-  font-weight: bold;
-  position: relative;
-
-  .mars-circle {
-    border-radius: 999px;
-    border: 3px solid $primary;
-    background-color: transparent;
-    position: absolute;
-    top: -4px;
-    right: -12px;
-    width: 6px;
-    height: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.phone {
-  color: $light-gray;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-
-  .phone-svg {
-    display: block;
-    max-width: 15px;
-    max-height: 15px;
-    width: auto;
-    height: auto;
-    margin-right: .3rem;
-  }
-}
-
-.container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 2.5rem 0;
+body {
+  overflow-x: hidden;
 }
