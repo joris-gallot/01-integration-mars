@@ -63,7 +63,7 @@
       .phone {
         margin-top: 4rem;
 
-        @media (min-width: $sm) {
+        @media (min-width: $md2sm) {
           display: none;
         }
       }

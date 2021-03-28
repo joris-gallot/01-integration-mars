@@ -17,16 +17,16 @@
     justify-content: flex-end;
 
     @media (max-width: $md) {
-      padding: 0 2rem;
+      padding: 0;
       justify-content: flex-start;
       grid-column: span 1 / span 1;
     }
 
-    @media (max-width: $sm) {
-      justify-content: flex-start;
-      padding: 0;
-      grid-column: span 1 / span 1;
-    }
+    //@media (max-width: $sm) {
+    //  justify-content: flex-start;
+    //  padding: 0;
+    //  grid-column: span 1 / span 1;
+    //}
 
     .description {
       display: flex;
@@ -72,13 +72,13 @@
       align-items: center;
       padding: 0 5rem;
 
-      @media (max-width: $md) {
-        font-size: 50px;
-        padding: 0 3rem;
-        grid-column: span 1 / span 1;
-      }
+      //@media (max-width: $md) {
+      //  font-size: 50px;
+      //  padding: 0 3rem;
+      //  grid-column: span 1 / span 1;
+      //}
 
-      @media (max-width: $sm) {
+      @media (max-width: $md) {
         max-width: none;
         font-size: 50px;
         padding: 0 1rem;

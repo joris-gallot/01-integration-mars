@@ -7,6 +7,10 @@
   position: relative;
   padding-left: 18rem;
 
+  @media (max-width: $lg) {
+    padding-left: 10rem;
+  }
+
   @media (max-width: $md) {
     padding-left: 2rem;
   }
@@ -24,6 +28,11 @@
     font-weight: bold;
     animation: bounce 1s infinite;
 
+
+    @media (max-width: $lg) {
+      left: 3rem;
+    }
+
     @media (max-width: $md) {
       left: 0;
     }
@@ -34,6 +43,7 @@
     flex-direction: column;
     max-width: 400px;
     position: relative;
+    z-index: 5;
 
     .red-circle {
       position: absolute;
@@ -66,7 +76,7 @@
       line-height: 30px;
 
 
-      @media (min-width: $sm) and (max-width: $md) {
+      @media (min-width: $md2sm) and (max-width: $xl) {
         margin-bottom: 15rem;
       }
     }
@@ -87,16 +97,32 @@
     right: calc(38% - calc(#{$size} / 2));
     top: calc(50% - calc(#{$size} / 2));
 
-    @media (max-width: $sm) {
-      display: none;
-    }
-
-    @media (max-width: $md) {
-      $size: 580px * .6;
+    @media (max-width: $xl) {
+      $size: 580px * .7;
       width: $size;
       height: $size;
       right: calc(38% - calc(#{$size} / 2));
       top: calc(70% - calc(#{$size} / 2));
+    }
+
+    @media (max-width: $lg) {
+      $size: 580px * .53;
+      width: $size;
+      height: $size;
+      right: calc(38% - calc(#{$size} / 2));
+      top: calc(70% - calc(#{$size} / 2));
+    }
+
+    @media (max-width: $md) {
+      $size: 290px;
+      width: $size;
+      height: $size;
+      right: calc(45% - calc(#{$size} / 2));
+      top: calc(70% - calc(#{$size} / 2));
+    }
+
+    @media (max-width: $md2sm) {
+      display: none;
     }
 
 
@@ -107,6 +133,10 @@
       max-height: 527px;
       width: auto;
       height: auto;
+
+      @media (max-width: $lg) {
+        width: .7 * $percentage;
+      }
 
       @media (max-width: $md) {
         width: .6 * $percentage;
@@ -122,8 +152,11 @@
     width: 38%;
     height: 100%;
 
+    @media (max-width: $md) {
+      width: 45%;
+    }
 
-    @media (max-width: $sm) {
+    @media (max-width: $md2sm) {
       display: none;
     }
 

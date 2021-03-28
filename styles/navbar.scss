@@ -7,13 +7,13 @@ body {
     }
 
     .nav-container .right-menu .buy {
-      @media (max-width: $sm) {
+      @media (max-width: $md2sm) {
         color: white;
       }
     }
 
     .nav-container .right-menu .burger .line {
-      @media (max-width: $sm) {
+      @media (max-width: $md2sm) {
         background-color: white;
       }
     }
@@ -36,6 +36,9 @@ body {
     align-items: center;
     height: 100%;
 
+    @media (max-width: $lg) {
+      padding: 0 5rem;
+    }
     @media (max-width: $md) {
       padding: 0 3rem;
     }
@@ -53,7 +56,11 @@ body {
       .phone {
         margin-left: 4rem;
 
-        @media (max-width: $sm) {
+        @media (max-width: $md) {
+          margin-left: 2rem;
+        }
+
+        @media (max-width: $md2sm) {
           display: none;
         }
       }
@@ -73,7 +80,11 @@ body {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 400ms;
 
-        @media (max-width: $sm) {
+        @media (max-width: $md) {
+          margin-right: 1rem;
+        }
+
+        @media (max-width: $md2sm) {
           color: black;
         }
 
@@ -98,7 +109,7 @@ body {
           margin-bottom: .3rem;
           transition: transform 0.3s, background-color 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-          @media (max-width: $sm) {
+          @media (max-width: $md2sm) {
             background-color: black;
           }
         }
